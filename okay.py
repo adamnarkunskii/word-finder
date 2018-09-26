@@ -19,7 +19,7 @@ word = "".join(sorted(sys.argv[1]))
 
 
 words = set()
-for r in reversed(range(5, len(word)+1)):
+for r in range(5, len(word)+1):
 	for combination in itertools.combinations(word, r):
 		for x in check(combination):
 			words.add(x)
